@@ -1,5 +1,5 @@
-import 'package:build_ui/constants/app_font_styles.dart';
-import 'package:build_ui/constants/constant_colors.dart';
+import 'package:build_ui/core/constants/app_font_styles.dart';
+import 'package:build_ui/core/constants/constant_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:svg_flutter/svg.dart';
 

@@ -1,4 +1,4 @@
-import 'package:build_ui/constants/constant_colors.dart';
+import 'package:build_ui/core/constants/constant_colors.dart';
 import 'package:build_ui/features/home/widgets/best_selling_section.dart';
 import 'package:build_ui/features/home/widgets/custom_appbar.dart';
 import 'package:build_ui/features/home/widgets/custom_bottom_navigationbar.dart';
