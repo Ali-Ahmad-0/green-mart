@@ -30,6 +30,7 @@ class BestSellingSection extends StatelessWidget {
         ),
         SizedBox(height: 12.h),
         GridView.builder(
+physics: BouncingScrollPhysics(),
           shrinkWrap: true,
           itemCount: 8,
           scrollDirection: Axis.vertical,
