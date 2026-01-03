@@ -1,13 +1,12 @@
-import 'dart:developer';
 
 import 'package:build_ui/core/constants/app_font_styles.dart';
 import 'package:build_ui/core/constants/constant_colors.dart';
 import 'package:flutter/material.dart';
+import 'package:svg_flutter/svg.dart';
 
 class AccountSettingsItem extends StatelessWidget {
   const AccountSettingsItem({super.key, required this.icon, required this.title});
-  final IconData icon;
-  final String title;
+  final String  icon , title;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -16,7 +15,7 @@ class AccountSettingsItem extends StatelessWidget {
         children: [
           ListTile(
             contentPadding: EdgeInsets.zero,
-            leading: Icon(icon , color: AppColors.primaryColorBlack,),
+            leading: SvgPicture.asset(icon),
             title: Text(
               title,
               style: AppFontStyles.fontSize20Weight400WithColorBlack,

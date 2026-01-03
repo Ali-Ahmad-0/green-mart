@@ -1,11 +1,12 @@
 import 'package:build_ui/core/constants/app_font_styles.dart';
 import 'package:build_ui/core/constants/constant_colors.dart';
+import 'package:build_ui/features/favorite/item_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class FavouriteItem extends StatelessWidget {
-  const FavouriteItem({super.key});
-
+  const FavouriteItem({super.key, required this.itemModel});
+  final FavoriteModel itemModel;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -17,36 +18,39 @@ class FavouriteItem extends StatelessWidget {
             leading: SizedBox(
               height: 55.h,
               width: 55.w,
-              child: Image.asset('assets/images/drink.png'),
+              child: Image.asset(itemModel.image),
             ),
             title: Text(
-              'Sprite Can',
+              itemModel.title,
               style: AppFontStyles.fontSize16Weight400WithColorBlack.copyWith(
                 fontFamily: 'Gilroy',
               ),
             ),
             subtitle: Text(
-              '325ml',
+            itemModel.subTitle,
               style: AppFontStyles.fontSize14Weight600WithGreyColor.copyWith(
                 fontWeight: FontWeight.w400,
               ),
             ),
-            trailing: SizedBox(
-              width: 80.w,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text(
-                    r'$1.50',
-                    style: AppFontStyles.fontSize16Weight600WithColorGreen
-                        .copyWith(color: AppColors.primaryColorBlack),
-                  ),
-                  Icon(
-                    size: 30,
-                    Icons.keyboard_arrow_right_rounded,
-                    color: AppColors.primaryColorBlack,
-                  ),
-                ],
+            trailing: Padding(
+              padding: const EdgeInsets.only(right: 1),
+              child: SizedBox(
+                width: 110.w,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    Text(
+                     r'$' + itemModel.price,
+                      style: AppFontStyles.fontSize16Weight600WithColorGreen
+                          .copyWith(color: AppColors.primaryColorBlack),
+                    ),
+                    Icon(
+                      size: 30,
+                      Icons.keyboard_arrow_right_rounded,
+                      color: AppColors.primaryColorBlack,
+                    ),
+                  ],
+                ),
               ),
             ),
           ),

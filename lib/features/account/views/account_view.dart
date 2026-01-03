@@ -9,27 +9,27 @@ class AccountView extends StatelessWidget {
   AccountView({super.key});
   // my detail , deleviry address , payment methods , promo codes , notifications ,help , about
   List<AccountSettingsItem> settingsList = [
-    AccountSettingsItem(icon: Icons.shopping_bag_outlined, title: 'Orders'),
-    AccountSettingsItem(icon: Icons.data_array, title: 'My Details'),
+    AccountSettingsItem(icon: 'assets/icons/Orders icon.svg', title: 'Orders'),
+    AccountSettingsItem(icon: 'assets/icons/My Details icon.svg', title: 'My Details'),
     AccountSettingsItem(
-      icon: Icons.location_on_outlined,
+      icon: 'assets/icons/Delicery address.svg',
       title: 'Delivery address',
     ),
 
     AccountSettingsItem(
-      icon: Icons.payment,
+      icon: 'assets/icons/Vector icon.svg',
       title: 'Payment methods',
     ),
     AccountSettingsItem(
-      icon: Icons.discount_outlined,
+      icon: 'assets/icons/Promo Cord icon.svg',
       title: 'Promo codes',
     ),
     AccountSettingsItem(
-      icon: Icons.notifications_active_outlined,
+      icon: 'assets/icons/Bell icon.svg' ,
       title: 'Notifications',
     ),
-    AccountSettingsItem(icon: Icons.help_outline_sharp, title: 'Help'),
-    AccountSettingsItem(icon: Icons.info_outline, title: 'About'),
+    AccountSettingsItem(icon: 'assets/icons/help icon.svg', title: 'Help'),
+    AccountSettingsItem(icon: 'assets/icons/about icon.svg', title: 'About'),
   ];
 
   @override
