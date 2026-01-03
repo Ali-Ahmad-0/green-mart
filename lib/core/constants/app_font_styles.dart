@@ -1,44 +1,46 @@
 import 'package:build_ui/core/constants/constant_colors.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class AppFontStyles {
   static TextStyle fontSize12Weight400WithGreenColor = GoogleFonts.poppins(
     color: Color(0xff53B175),
-    fontSize: 12,
+    fontSize: 12.sp,
     fontWeight: FontWeight.w400,
     letterSpacing: 3,
   );
   static TextStyle fontSize14Weight600WithGreyColor = GoogleFonts.poppins(
-    fontSize: 14,
+    fontSize: 14.sp,
     color: Color(0xff7C7C7C),
     fontWeight: FontWeight.w600,
   );
 
   static TextStyle fontSize24Weight600WithColorBlack = GoogleFonts.poppins(
-    fontSize: 24,
+    fontSize: 24.sp,
     fontWeight: FontWeight.w600,
     color: AppColors.primaryColorBlack,
   );
   static TextStyle fontSize20Weight400WithColorBlack = TextStyle(
     fontFamily: 'Gilroy',
-    fontSize: 20,
+    fontSize: 20.sp,
     fontWeight: FontWeight.w400,
     color: AppColors.primaryColorBlack,
+    
   );
   static TextStyle fontSize16Weight600WithColorGreen = GoogleFonts.poppins(
-    fontSize: 16,
+    fontSize: 16.sp,
     fontWeight: FontWeight.w600,
     color: Color(0xff53B175),
   );
   static TextStyle font18Weight600white = GoogleFonts.poppins(
-    fontSize: 18,
+    fontSize: 18.sp,
     fontWeight: FontWeight.w600,
     color: Color(0xfffcfcfc),
   );
   static TextStyle fontSize16Weight400WithColorBlack = GoogleFonts.poppins(
     fontWeight: FontWeight.w400,
-    fontSize: 16,
+    fontSize: 16.sp,
     color: Color(0xff181725),
   );
 }

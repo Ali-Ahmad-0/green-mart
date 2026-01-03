@@ -3,12 +3,14 @@ import 'package:build_ui/core/constants/constant_colors.dart';
 import 'package:flutter/material.dart';
 
 class Search_TextField extends StatelessWidget {
-  const Search_TextField({
+   Search_TextField({
     super.key,
-    required this.fixedborder,
   });
 
-  final InputBorder fixedborder;
+InputBorder fixedborder = OutlineInputBorder(
+    borderRadius: BorderRadius.circular(15),
+    borderSide: BorderSide(color: AppColors.greyBackgroundoftextfield),
+  );
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +23,7 @@ class Search_TextField extends StatelessWidget {
           border: fixedborder,
           fillColor: AppColors.greyBackgroundoftextfield,
           filled: true,
-          prefixIcon: Icon(Icons.search, size: 18),
+          prefixIcon: Icon(Icons.search, size: 25 , color: AppColors.primaryColorBlack,),
           hintText: 'Search Store',
           hintStyle: AppFontStyles.fontSize14Weight600WithGreyColor,
         ),
