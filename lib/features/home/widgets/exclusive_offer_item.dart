@@ -1,11 +1,12 @@
 import 'package:build_ui/core/constants/app_font_styles.dart';
 import 'package:build_ui/core/constants/constant_colors.dart';
+import 'package:build_ui/features/home/card_item_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class Exclusive_offer_item extends StatelessWidget {
-  const Exclusive_offer_item({super.key});
-
+  const Exclusive_offer_item({super.key, required this.item});
+  final CardItemModel item;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -21,16 +22,16 @@ class Exclusive_offer_item extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Center(
-            child: Image.asset('assets/images/banana1.png', height: 100.h),
+            child: Image.asset(item.imagePath, height: 100.h),
           ),
           SizedBox(height: 25.h),
           Text(
-            'Organic Bananas',
+            item.title,
             style: AppFontStyles.fontSize16Weight400WithColorBlack,
           ),
           SizedBox(height: 5.h),
           Text(
-            '7pcs',
+            item.coantity,
             style: AppFontStyles.fontSize14Weight600WithGreyColor.copyWith(
               fontWeight: FontWeight.w400,
             ),
@@ -39,7 +40,7 @@ class Exclusive_offer_item extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
-                r'$4.99',
+                r'$' + item.price,
                 style: AppFontStyles.fontSize24Weight600WithColorBlack.copyWith(
                   fontSize: 18,
                 ),

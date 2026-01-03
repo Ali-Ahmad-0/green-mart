@@ -54,7 +54,6 @@ class AccountView extends StatelessWidget {
             height: 67.h,
             child: FloatingActionButton(
               elevation: 0,
-              splashColor: Colors.green,
               backgroundColor: AppColors.greyBackgroundoftextfield,
               onPressed: () {},
               shape: const RoundedRectangleBorder(
